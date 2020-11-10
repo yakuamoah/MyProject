@@ -1,0 +1,118 @@
+<html>
+
+<script>
+
+  //CUTOMER / EMPLOYER 
+    function calculateTip() {
+        var amt = document.getElementById("amt").value;
+        var tip = document.getElementById("tip").value;
+        var n = document.getElementById("n").value;
+        
+        
+        var moneyforEach = 0;
+           //IF # OF PEOPLE SHARING BTWN 1-6
+        if (n < 7 && n > 0)
+        {
+        if(tip == 1)
+        {   
+            var customTip = document.getElementById("customtip").value; 
+            amt = parseInt(amt)+parseInt(customTip);
+        }
+        else 
+        {
+            amt = parseInt(amt)+(parseInt(amt)*tip);
+        }
+        amt = parseInt(amt)/parseInt(n);
+        document.getElementById("result").innerHTML = "Each person should pay : "+amt;
+        //document.getElementById("result").innerHTML = "Each person should pay : "+amt;
+}
+ //IF # OF PEOPLE SHARING NOT BTWN 1-6
+else {
+  console.log("Enter a different amount")
+  document.getElementById("result").innerHTML = "The amount of people sharing a bill must be between 1 and 6. Please try again. ";
+}
+
+
+    }
+
+//EMPLOYER
+    function calculateTip2() {
+        var amt = document.getElementById("amt1").value;
+        var tip = document.getElementById("tip1").value;
+        var x = document.getElementById("x").value;
+        
+        
+        var moneyforEach = 0;
+           //IF # OF PEOPLE SHARING BTWN 1-6
+        if (x < 7 && x > 0)
+        {
+            amt1 = (parseInt(amt)-(parseInt(tip)));
+            amt1 = amt1/tip;
+            amt1 = amt1*100;
+        
+        //amt = parseInt(amt)/parseInt(x);
+        document.getElementById("result").innerHTML = "The tip percentage for this tab was: "+amt1+"%";
+}
+ //IF # OF PEOPLE SHARING NOT BTWN 1-6
+else{
+  console.log("Enter a different amount")
+  document.getElementById("result").innerHTML = "The amount of people sharing a bill must be between 1 and 6. Please try again. ";
+}
+
+
+    }
+
+
+
+</script>
+<body>
+
+    <center> 
+    <h1> Dining Tip Calculator</h1>
+    <br><br><br>
+    <h2> CUSTOMERS CALCULATE DINING TIP BILL BELOW</h2>
+    
+    How much was your bill? <input type ='text' id = 'amt' placeholder="Enter the anount : ">
+    <br><br>
+    How was your service? Percent of tip :  
+    <select id="tip">
+            <option disabled selected value="0">-- Choose an Option --</option>
+            
+            <option value="0.2">20&#37; &#45; Good Service</option>
+            <option value="0.15">15&#37; &#45; The Service was OK</option>
+            <option value="0.1">10&#37; &#45; Bad Service</option>
+            <option value="1">Custom Tip</option>
+   </select>
+   <input type ='text' id = 'customtip' placeholder="Enter the custom tip amount : ">
+   <br><br>
+   Number of people are sharing the bill (1-6)?
+   
+   <input type ='text' id = 'n' placeholder="Enter the number of persons : ">
+    <br><br>
+   <input type = "button" value="Submit" onclick="calculateTip()">
+    <br><br><br>
+
+    <p id="result"></p>
+
+    </left>
+
+
+
+  
+    <h2> CALCULATE DINING TIP PERCENTAGE BELOW</h2>
+    How much was the customer's bill including tip? <input type ='text' id = 'amt1' placeholder="Enter the anount : ">
+    <br><br>
+  How much was the customer's bill not including tip? <input type ='text' id = 'tip1' placeholder="Enter the anount : ">
+  <br><br>
+   How many people were sharing the bill (1-6)?
+   <input type ='text' id = 'x' placeholder="Enter the number of persons : ">
+    <br><br>
+   <input type = "button" value="Submit" onclick="calculateTip2()">
+    
+    <br>    <br>    <br>    <br>
+    
+    </right>
+
+</body>
+
+</html>
