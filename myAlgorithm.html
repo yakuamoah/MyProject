@@ -12,23 +12,20 @@ body {
   margin: 0;
 }
 
-
-
 /* Increase the/* Style the header */
 .header {
-  padding: 140px;
+  padding: 120px;
   text-align: center;
-  background: #6495EF; /* blue background */
-  color: white; /* white text color */
+  background: #000000; /* blue background */
+  color: green; /* white text color */
 } font size of the h1 element */
 .header h1 {
-  font-size: 80px;
+  font-size: 100px;
 }
 
 .header h2 {
   font-size: 30px;
 }
-
 
 /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
 @media screen and (max-width: 400px) {
@@ -42,11 +39,8 @@ body {
 <body>
 
 <div class="header">
-  <h1>HELLO... WELCOME TO YOUR DININT TIP CALCULATOR</h1>
 <script>
-
   //CUTOMER WANTS TO CALCULATE
-
     function calculateTip() {
         var amt = document.getElementById("amt").value;
         var tip = document.getElementById("tip").value;
@@ -70,7 +64,7 @@ body {
         }
         //DISPLAY TOTAL 
         amt = parseInt(amt)/parseInt(n);
-        document.getElementById("result").innerHTML = "Each person should pay : "+amt;
+        document.getElementById("result").innerHTML = "Each person should pay: $"+amt;
         //document.getElementById("result").innerHTML = "Each person should pay : "+amt;
 }
  //IF # OF PEOPLE SHARING NOT BTWN 1-6
@@ -78,11 +72,9 @@ else {
   console.log("Enter a different amount")
   document.getElementById("result").innerHTML = "The amount of people sharing a bill must be between 1 and 6. Please try again. ";
 }
-
-
     }
 
-//EMPLOYER
+//EMPLOYEE
     function calculateTip2() {
         var amt = document.getElementById("amt1").value;
         var tip = document.getElementById("tip1").value;
@@ -109,14 +101,11 @@ else{
 
     }
 
- //NOW TESTING REQUIREMENTS 3
- //
-
 </script>
 <body>
 
     <center> 
-    <h1> Dining Tip Calculator</h1>
+    <h1> DINING TIP CALCULATOR </h1>
     <br><br><br>
     <h2> CUSTOMERS CALCULATE DINING TIP BILL BELOW</h2>
     
@@ -145,7 +134,7 @@ else{
     </left>
 
   
-    <h2> CALCULATE DINING TIP PERCENTAGE BELOW</h2>
+    <h2> EMPLOYEES CALCULATE DINING TIP PERCENTAGE BELOW</h2>
     How much was the customer's bill including tip? <input type ='text' id = 'amt1' placeholder="Enter the anount : ">
     <br><br>
   How much was the customer's bill not including tip? <input type ='text' id = 'tip1' placeholder="Enter the anount : ">
