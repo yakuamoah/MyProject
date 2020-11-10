@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Courier, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  padding: 140px;
+  text-align: center;
+  background: #6495ED; /* green background */
+  color: black; /* white text color */
+}
+
+/* Increase the font size of the h1 element */
+.header h1 {
+  font-size: 80px;
+}
+
+.header h2 {
+  font-size: 30px;
+}
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #339;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #191970;
+  color: white;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  flex: 70%;
+  background-color: #6495ED;
+  padding: 20px;
+  font-size: 20px;
+  font-family: Courier, Helvetica, sans-serif;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width:100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Dining Tip Calculator</h1>
+  <h2>~ Yvonne Akuamoah ~ Halima Monds ~</h2>
+</div>
+  
+<div class="navbar">
+  <a href="#">About Us</a>
+  <a href="#">About Project</a>
+  <a href= "https://For-Em.yvonneakuamoah2.repl.co" class="right">Calculate My Tip!</a>
+</div>
+
+ <div class="main">
+    <h2>ABOUT POJECT</h2>
+    <h5>Software Engineering, Sep 29, 2020</h5>
+    <div><img id="x" src="dining.png" style="height:600px;" fontSize: "50px"></div> 
+    <div><img id="x" src="dining2.png" style="height:350px;" fontSize: "50px"></div> 
+    <p>Description:</p>
+    <p>The goal of a dining tip calculator is to automatically calcuate a dining tip total or percentage for a customer, employee or employer. When at a restaurant, a customer may need to know how much their total will be by inputting their total bill, percent of tip, and number of people sharing that bill. The customer is unable to asks the waitress to do it, the employee would have to go through the sames steps after asking the customer how much they would like to tip, if at all. If an employee want's to see their average tip percentage for their employee's they could also calculate by scrolling to the bottom and inputting the information requested. The functions include adding a tip percent option including 10% 15%, 20% or custom amount to the final bill. The final amount can be paid by as many as one person or six people. If a user enters an amount that is not between 1 and 6, and error messgae pops up promting them to try again. The calculator outputs a tip and bill amount for each player￼. 
+      Above is an image of the first rough draft of the calcultor encompassing all the basic functions of the tool.
+    </p>
+
+<div class="row">
+  <div class="side">
+    <h2>About Us</h2>
+    <h5>Photo of Yvonne:</h5>
+    <div><img id="x" src="cute1.JPG" style="height:500px;"></div> 
+    <p>Yvonne is a Senior Computer Science major and Naval Science minor from Los Angeles, CA. She currently resides in Atlanta where she attends Spelman College. Computer scince and emerging technology has be a passion of hers since high school when she took her first AP programming course in Java. After transferring to Spelman from Arizona State, she has been apart of multiple projects involving data mining, cyber security, robotic services, and much more. </p>
+    <h5>Photo of Halima:</h5>
+    <div><img id="x" src="unnamed.jpg" style="height:300px";></div> 
+    <p>Halima Monds is a Computer Science major graduating December 2020. After college she plans on attaining a PhD in Computer Science with an emphasis on Human-Centered Computing. Some of her hobbies include: playing ukulele, guitar, and chess. She currently is self-employed and is the founder of Athari LLC a startup tech company with a focus on social impact and social justice.</p>
+  </div>
+ 
+    <br>
+  </div>
+</div>
+
+</body>
+</html>
+
